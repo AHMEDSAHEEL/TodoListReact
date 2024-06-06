@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+header {
+  background-color: rgb(147, 67, 67);
+
+}
+
+head,
+body {
+  background-color: bisque;
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+header {
+
+  background-color: rgb(147, 67, 67);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  padding: 20px;
+}
+
+.DivCont {
+  margin: 20px;
+  flex: 1;
+}
+
+.content {
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 21px;
+}
+
+.btn {
+  outline: 0;
+  border: 0;
+  border-radius: 5%;
+  background-color: rgb(140, 71, 71);
+  padding: 10px;
+  font-size: 15px;
+  color: black;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.btn:hover {
+  border: 2px solid black;
+  cursor: pointer;
+  background-color: green;
+}
+
+.footer {
+  background-color: rgb(147, 67, 67);
+  width: 100%;
+  padding: 20px;
+  text-transform: uppercase;
+  align-items: center;
+  text-align: center;
+}
+
+.li {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  list-style: none;
+  background-color: #eee;
+  margin: 10px;
+  width: 100%;
+  padding: 15px;
+}
+
+#myCheck {
+  background-color: red;
+  width: 1.5rem;
+  width: 24x;
+  min-width: 34px;
+  height: 1.5rem;
+  height: 24px;
+  min-height: 34px;
+  cursor: pointer;
+  padding: 20px;
+
+}
+
+input[type="checkbox"]:checked {
+  background-color: green;
+}
+
+input:focus+label {
+  text-decoration: underline;
+
+}
+
+label {
+  padding: 5px;
+}
+
+svg {
+  color: red;
+  width: 24px;
+  height: 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  justify-content: flex-end;
+  align-items: end;
+}
+
+.emptyPara {
+  display: flex;
+  font-size: 1.5rem;
+  margin-top: 50px;
+  background-color: #eee;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+
+}
+
+.addForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+}
+
+.addForm input {
+  padding: 10px;
+  border-radius: 5%;
+  color: black;
+  border: 0;
+  outline: 0;
+  background-color: #eee;
+}
+
+.btn-form {
+  margin: 10px;
+  padding: .2rem;
+  border-radius: 5%;
+  border: 0;
+}
+
+.add {
+  color: green;
+  cursor: pointer;
+}
+
+.btn-form:hover {
+  background-color: green
+}
+
+.btn-form:hover .add {
+  color: white
+}
+
+.searchForm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 1.8rem;
+
+}
+
+#search {
+  padding: 10px;
+  border-radius: 5%;
+  color: black;
+  border: 0;
+  outline: 0;
+  background-color: #eee;
+}
