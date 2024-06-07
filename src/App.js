@@ -22,8 +22,8 @@ function App() {
   // const itemMapFilt=number.filter(n => n>0).map(n =>({num : n}))
   // console.log(itemMapFilt); 
 
-  const [items, setItem] = useState([])
-    // JSON.parse(localStorage.getItem('todo_list'))
+  const [items, setItem] = useState(
+    JSON.parse(localStorage.getItem('todo_list')))
     //[
     // {
     //   id: 1,
@@ -43,7 +43,7 @@ function App() {
   //]
 //);
  
-  const API_URL='http://localhost:3500/itemss'
+ // const API_URL='http://localhost:3500/itemss'
   const [newItem,setNewItem] = useState('');
   const [search,setSearch]=useState('')
 
