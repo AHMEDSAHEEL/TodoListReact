@@ -1,7 +1,7 @@
 import Header from './Header';
 import Content from './Content';
 import Footer from './Footer';
-import { useState } from 'react';
+import { useState ,useEffect} from 'react';
 import AddItem from './AddItem';
 import SearchItems from './SearchItems';
 
@@ -22,8 +22,8 @@ function App() {
   // const itemMapFilt=number.filter(n => n>0).map(n =>({num : n}))
   // console.log(itemMapFilt); 
 
-  const [items, setItem] = useState(
-    JSON.parse(localStorage.getItem('todo_list'))
+  const [items, setItem] = useState([])
+    // JSON.parse(localStorage.getItem('todo_list'))
     //[
     // {
     //   id: 1,
@@ -41,12 +41,26 @@ function App() {
     //   item: "Intern Assessment"
     // }
   //]
-);
+//);
  
-
+  const API_URL='http://localhost:3500/itemss'
   const [newItem,setNewItem] = useState('');
   const [search,setSearch]=useState('')
 
+// useEffect(()=>{ //u connot use async directly in annonoums func
+//   const fetchItems=async()=>{
+//     try{
+//       const response= await fetch(API_URL)
+//       console.log(response)
+//       const listItems= await response.json();
+//       console.log(listItems)
+//       setItem(listItems)
+//     }catch(err){
+//    console.log(err.stack)
+//     }
+//   }
+//   (async ()=> await fetchItems())()
+// },[])
 
   const addItem = (item)=>{
     const id=items.length ? items[items.length-1].id+1: 1;
@@ -86,7 +100,8 @@ function App() {
 
   return (
     <div className='main'>
-      {<Header title="To Do List" /> /*props and drilling */}
+      
+      {<Header title="To Do List" />}
       <AddItem
         newItem={newItem}
         setNewItem={setNewItem}
@@ -96,11 +111,9 @@ function App() {
       <SearchItems 
         search={search}
         setSearch={setSearch}
-      />
+      />  
       <Content
         items={items.filter(item =>((item.item).toLowerCase()).includes(search.toLowerCase()))}
-        
-        setItem={setItem}
         handleCheck={handleCheck}
         deleteTODO={deleteTODO}
 
